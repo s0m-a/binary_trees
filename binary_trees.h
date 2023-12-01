@@ -1,6 +1,7 @@
 #ifndef BINARY_TREES_H
 #define BINARY_TREES_H
 
+#include <limits.h>
 #include <string.h>
 #include <stdlib.h>
 #include <stddef.h>
@@ -54,6 +55,7 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 				     const binary_tree_t *second);
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
-bst_t *bst_insert(bst_t **tree, int value)
-binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree)
+int binary_tree_is_complete(const binary_tree_t *tree);
+binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
+binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
 #endif
